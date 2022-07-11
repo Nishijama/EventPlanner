@@ -3,13 +3,10 @@ const app = express();
 
 app.set("view engine", "ejs")
 
-app.get("/", (req, res) => {
-    res.render("index");
-})
-
 const tableRouter = require("./routes/tables")
 const guestsRouter = require("./routes/guests")
 
+app.use(express.static("public"))
 app.use('/tables', tableRouter);
 app.use('/guests', guestsRouter);
 
