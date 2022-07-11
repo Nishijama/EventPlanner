@@ -45,7 +45,6 @@ async function loadGuests() {
     const response = await fetch("base.json");
     const data = await response.json();
     data.forEach(object => {
-        new Guest();
         console.log(object.name);
         let guestTag = document.createElement('p');
         guestTag.setAttribute('draggable', 'true');
