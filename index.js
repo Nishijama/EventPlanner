@@ -1,16 +1,14 @@
-
 const tables = document.querySelectorAll(".table");
 let tableCapacity = 4;
 
-fetchGuests();
+loadGuests();
 
 window.onload = () => {
 checkTableCapacity();
 }
 
-
-
 // FUNCTION DEFINITIONS
+
 
 function getDragAfterElement(table, y) {
     const draggableElements = [...table.querySelectorAll('.draggable:not(.dragging)')]
@@ -40,18 +38,24 @@ function checkTableCapacity() {
     });
 }
 
-async function fetchGuests() {
+// PROBABLY COULD REFACTOR USING CLASSES !!!
+
+
+async function loadGuests() {
     const response = await fetch("base.json");
     const data = await response.json();
     data.forEach(object => {
+        new Guest();
         console.log(object.name);
         let guestTag = document.createElement('p');
-        // guestTag.classList.add('guestTag');
         guestTag.setAttribute('draggable', 'true');
         guestTag.setAttribute('id', object.id);
         guestTag.classList.add('draggable', 'guestTag');
         guestTag.innerHTML = object.name;
         document.getElementById("table" + object.table).appendChild(guestTag)
+        guestTag.addEventListener('dblclick', () => {
+            guestTag.classList.toggle("highlighted");
+        })
         handleDragging();
     });
 }
@@ -104,7 +108,6 @@ function handleDragging() {
     // DRAGGING OVER TABLE
     tables.forEach(table => {
         table.addEventListener("dragover", e => {
-            console.log("drag over");
             e.preventDefault();
             const afterElement = getDragAfterElement(table, e.clientY)
             const currentDraggable = document.querySelector('.dragging');

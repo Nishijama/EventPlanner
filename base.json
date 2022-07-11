@@ -3,7 +3,7 @@
         "id": "1",
         "name": "Harry Potter",
         "house": "Griffindor",
-        "with": "Ginevra Weasley",
+        "with": "Cho Chang",
         "table": 1,
         "arrived": false
     },
@@ -44,7 +44,7 @@
         "id": "6",
         "name": "Draco Malfoy",
         "house": "Slytherin",
-        "with": "",
+        "with": "Draco's Mum",
         "table": 2,
         "arrived": false
     },

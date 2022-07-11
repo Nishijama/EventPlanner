@@ -12,6 +12,7 @@ body {
     border-radius: 15px;
     border: 1px solid #333;
     background-color: #EEE;
+    min-width: fit-content;
 }
 
 .navbar {
@@ -46,11 +47,12 @@ body {
     width: 80%;
     margin: auto;
     flex-wrap:wrap;
+    justify-content: space-evenly;
 }
 
 .table {
     width: 20%;    
-    min-width: 20%;
+    min-width: 105px;
     border: 1px solid #333;
     background-color: white;
     padding: 0px;
@@ -78,10 +80,27 @@ body {
     background-color: lightgray;
     color:black;
     cursor: grab;
+    min-width: fit-content;
     border: 1px solid white;
+}
+
+.highlighted {
+    background-color: aqua;
 }
 
 .draggable.dragging {
     opacity: 0.3;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
+
+@media (max-width: 1100px) {
+    .table {
+        width: 40%;   
+    }
+  }
+
+  @media (max-width: 600px) {
+    .table {
+        width: 60%;   
+    }
+  }
