@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* NAVBAR */
+
+.mainWindow {
+    margin: 10px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    background-color: #EEE;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.navbar {
+    width: auto;
+    padding: 15px;
+    display: flex;
+    background-color: #333;
+    color: white;
+    font-size: large;
+    align-items:center;
+    justify-content: space-between;
+    border: 1px solid #333;
+    border-radius: 10px 10px 0 0 ;  
+}
+.navbar p {
+    margin: 0px;
+}
+.navbar div {
+    display: flex;
+}
+
+.navbar div p,label {
+    display: block;
+    font-size: small;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* TABEL CONTAINER */
+
+.tablesContainer {
+    display: flex;  
+    width: 80%;
+    margin: auto;
+    flex-wrap:wrap;
+}
+
+.table {
+    width: 20%;    
+    min-width: 20%;
+    border: 1px solid #333;
+    background-color: white;
+    padding: 0px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    min-height: 134px;
+}
+
+.tableHeading {
+    margin: 0px;
+    padding: 5px;
+    border: 1px solid #333;
+    color: white;
+    background-color: #333;
+}
+
+/* FUNCTION CLASSES */
+
+.draggable {
+    margin: 0px;
+    padding: 5px;
+    display: inline-block;
+    background-color: lightgray;
+    color:black;
+    cursor: grab;
+    border: 1px solid white;
+}
+
+.draggable.dragging {
+    opacity: 0.3;
+    background-color: aqua;
+}
+button {
+    padding: 20xp;
+    margin: 20px 10px;
+}
