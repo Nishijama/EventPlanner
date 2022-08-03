@@ -1,4 +1,6 @@
 
+
+
 const tables = document.querySelectorAll(".table");
 let tableCapacity = 4;
 let GUEST_COUNT = 0;
