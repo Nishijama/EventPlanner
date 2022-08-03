@@ -8,7 +8,9 @@ Current features:
 * upload data to local storage
 * populate tables with guests
 * re-arrange sitting plan by drag-and-dropping guests
+* switch view to show other info than names (e.g., houses)
 * add new guests to the tables
+* notify when sitting arrangement exceeds table's capacity
 
 ![screenshot](static/screenshot_2022-08-03.png)
 

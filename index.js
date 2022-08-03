@@ -1,4 +1,4 @@
-
+// TODO: Update local storage after re-arranging
 
 
 const tables = document.querySelectorAll(".table");

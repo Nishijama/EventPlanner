@@ -80,7 +80,7 @@ body {
     margin: 0px;
     padding: 5px;
     display: inline-block;
-    background-color: lightgray;
+    background-color: rgb(83, 231, 155);
     color:black;
     cursor: grab;
     border: 1px solid white;
@@ -88,7 +88,7 @@ body {
 
 .draggable.dragging {
     opacity: 0.3;
-    background-color: aqua;
+    background-color: rgb(131, 233, 180);
 }
 button {
     padding: 20xp;
