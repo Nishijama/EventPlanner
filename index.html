@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitting Plan</title>
     <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.core.min.js" integrity="sha512-UhlYw//T419BPq/emC5xSZzkjjreRfN3426517rfsg/XIEC02ggQBb680V0VvP+zaDZ78zqse3rqnnI5EJ6rxA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 
 </head>
 <body>
@@ -14,58 +17,30 @@
 <div class="mainWindow">
     <div class="navbar">
         <p>Tables</p>
+
         <div>
             <p onclick="showNames()">Names</p>
-            <p onclick="showHouses()">Houses</p>
-            <p>Sectors</p>
-        </div>
-        <div class="toggleSet">
-            <input type="checkbox" name="keepTogether" id="keepTogether">
-            <label for="keepTogether">Keep couples together</label>
+            <p onclick="showCompanies()">Companies</p>
+            <p onclick="showSectors()">Sectors</p>
         </div>
         <div class="iconGroup">
-            <p>Back</p>
+            <button id="saveBtn">Save changes</button>
         </div>
     </div>
-    <div style="display: flex;flex-direction:column;align-items: center;">
-        <div>
-            <div>
-            <input id="AddGuestName" type="text" placeholder="Name">
-            <input id="AddGuestHouse" type="text" placeholder="House">
-            <input id="AddGuestTable" type="number" placeholder="Table">
-            <button id="AddGuestBtn">Add</button>
-            </div>
+    <div class="upload-bar">
+        <div style="display:flex;align-items:baseline ">
+            <input type="file" id="file_upload" />
+            <button onclick="upload()">Upload</button>      
         </div>
-        <div class="tablesContainer">
-            <div id="table1" class="table">
-                <p class="tableHeading"><b>Table 1</b></p>
-            </div>
-
-            <div id="table2" class="table">
-                <p class="tableHeading"><b>Table 2</b></p>
-            </div>
-
-            <div id="table3" class="table">
-                <p class="tableHeading"><b>Table 3</b></p>
-            </div>
-
-            <div id="table4" class="table">
-                <p class="tableHeading"><b>Table 4</b></p>
-            </div>
-            <div id="table5" class="table">
-                <p class="tableHeading"><b>Table 5</b></p>
-            </div>
-            <div id="table6" class="table">
-                <p class="tableHeading"><b>Table 6</b></p>
-            </div>
-            <div id="table7" class="table">
-                <p class="tableHeading"><b>Table 7</b></p>
-            </div>
-            <div id="table8" class="table">
-                <p class="tableHeading"><b>Table 8</b></p>
-            </div>
+    </div>
+    <div style="display: flex;flex-direction:row;align-items: top;">
+        <div class="table-wrapper">
+            <div id="table0" class="table">
+                <p class="tableHeading"><b>To be assigned</b></p>
+            </div>  
         </div>
-        <button>Save changes</button>
+        <div class="tablesContainer">           
+        </div>
     </div>
 </div>
 
